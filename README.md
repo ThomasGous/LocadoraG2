@@ -1,5 +1,11 @@
 # LocadoraG2
 
+Integrantes:
+
+Jonas Flores
+Laura Farioli
+Thomas Goulart
+
 Locadora de filmes
 
 Utilizar structures
