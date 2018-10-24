@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "filmes.h"
 
 void main(){
@@ -14,13 +15,17 @@ system("clear");
 	printf("2 - Menu Clientes\n");
 	printf("3 - Menu Alugueis\n");
 	printf("0 - Exit\n");
+
 	//scanf("%i",&opcao);
         c = getchar();
         opcao=atoi(&c);
 
+//as opcoes estao sendo selecionadas corretamente porem quando
+//digita um valor tipo texto o programa entra em loop
 do{	
 	switch(opcao){
 		case 1:
+
 			listarFilmes();
 			printf("===================== Locadora =====================\n");
 			printf("Bem Vindo! Escolha a opcao desejada!\n");
@@ -39,12 +44,14 @@ do{
 		case 3:
 			printf("caso 3\n");
 		scanf("%i",&opcao);
+
 		break;
 		case 0:
 			printf("Tchau tchau, Volte sempre!\n");
 		break;
 
 		default:
+
 		system("clear");
 		printf("\nOpcao invalida, tente novamente!\n\n");
 		opcao = 1;
@@ -56,6 +63,7 @@ do{
 			printf("0 - Exit\n");
 			c = getchar();
         		opcao=atoi(&c);		
+
 		break;
 		
 	}
