@@ -54,7 +54,37 @@ void CadastrarFilme(){
 	return;	
 }
 void ListarFilmes(){
+	struct Filmes filme;
+	FILE *arquivo;
+	char linha[100], *result;
+	int i;
 
+	setbuf(stdin,NULL);
+	system("clear");
+
+	printf("===================== Filmes Cadastrados =====================\n");
+	arquivo = fopen("BANCO_FILMES.txt", "rt");
+
+	if(arquivo == NULL)
+		printf("Problemas na abertura do arquivo\n");
+
+	
+	while (!feof(arquivo)){
+      		result = fgets(linha, 100, arquivo);
+      	if (result)
+		printf("%s",linha);
+  	}
+  	fclose(arquivo);
+
+	printf(" == FINAL DO RELATORIO == ");
+	printf("\n Digite a opcao 0 (zero) para voltar ao menu dos filmes -> ");
+	scanf("%d",&i);
+	while(i != 0){
+		printf("Opcao invalida, digite 0 (zero) para sair -> ");
+		scanf("%d",&i);
+	}
+	system("clear");
+	return;
 }
 
 int AtualizarFilme(int codigo){
